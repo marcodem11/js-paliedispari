@@ -1,26 +1,17 @@
-console.log('Pali e Dispari')
+console.log('Pari E Dispari')
 
-const gerry = prompt('Inserisci parola');
-console.log(gerry);
-
-if(ePalindroma(gerry) ) {
-    console.log('La parola è palindroma');
-} else {
-    console.log('La parola non è palindroma');
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function invertiParola( parola){
-    const chars = parola.split('');
-    const rejoin = chars.reverse().join('');
-    return rejoin
-}
+console.log (getRandomIntInclusive(1,5) )
+const ePari = function(numero) {
+    console.log(numero)
 
-function ePalindroma( parola) {
-    const invertita = invertiParola(parola);
-    if(parola === invertita) {
+    if(numero%2 === 0) {
         return true;
-    } else{
-        return false;
     }
+    return false;
 }
-
