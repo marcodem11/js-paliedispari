@@ -15,3 +15,20 @@ const ePari = function(numero) {
     }
     return false;
 }
+
+const scelta = prompt('Scegli pari o dispari');
+const uNumero = parseInt( prompt('Scegli un numero da 1 a 5'));
+const pcNumero = getRandomIntInclusive(1,5);
+
+console.log(scelta,uNumero,pcNumero);
+const risultato = uNumero + pcNumero;
+
+if(
+  (scelta === 'pari' && ePari(risultato) ) ||
+  (scelta === 'dispari' && !ePari(risultato))
+  ){
+      console.log('Hai vinto')
+  } else{
+      console.log('Hai perso')
+  }
+  
